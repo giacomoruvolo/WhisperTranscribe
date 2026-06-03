@@ -1,0 +1,20 @@
+# Build artifacts
+build/
+DerivedData/
+*.xcarchive
+
+# Distributables (published via GitHub Releases, not committed)
+*.dmg
+*.zip
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Xcode user data
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+
+# Internal context note (private, not published)
+PROJECT_CONTEXT.md

@@ -1,0 +1,184 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+		A001 /* WhisperTranscribeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A101 /* WhisperTranscribeApp.swift */; };
+		A002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A102 /* ContentView.swift */; };
+		A003 /* TranscriptionQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A103 /* TranscriptionQueue.swift */; };
+		A005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A104 /* Assets.xcassets */; };
+		A007 /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A106 /* SetupView.swift */; };
+		A009 /* AdvancedSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A108 /* AdvancedSettingsView.swift */; };
+		A011 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A111 /* Localization.swift */; };
+		A010 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A110 /* Info.plist */; };
+
+		A050 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A150 /* AppKit.framework */; };
+
+		A070 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A001 /* WhisperTranscribeApp.swift in Sources */,
+				A002 /* ContentView.swift in Sources */,
+				A003 /* TranscriptionQueue.swift in Sources */,
+				A007 /* SetupView.swift in Sources */,
+				A009 /* AdvancedSettingsView.swift in Sources */,
+				A011 /* Localization.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A075 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (A050 /* AppKit.framework in Frameworks */,);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A080 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A005 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+
+		A090 /* WhisperTranscribe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A091;
+			buildPhases = (A070, A075, A080);
+			buildRules = ();
+			dependencies = ();
+			name = WhisperTranscribe;
+			productName = WhisperTranscribe;
+			productReference = A095 /* WhisperTranscribe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A091 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (A092, A093);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A092 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 3.0;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = WhisperTranscribe/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WhisperTranscribe;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/../Frameworks");
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 3.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.giacomoruvolo.whispertranscribe";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				CODE_SIGNING_ALLOWED = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = NO;
+			};
+			name = Debug;
+		};
+		A093 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 3.0;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = WhisperTranscribe/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WhisperTranscribe;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/../Frameworks");
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 3.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.giacomoruvolo.whispertranscribe";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				CODE_SIGNING_ALLOWED = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = NO;
+			};
+			name = Release;
+		};
+
+		A095 /* WhisperTranscribe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhisperTranscribe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+
+		A100 /* WhisperTranscribe */ = {
+			isa = PBXGroup;
+			children = (
+				A101, A102, A103, A104, A106, A108, A111, A110,
+			);
+			path = WhisperTranscribe;
+			sourceTree = "<group>";
+		};
+		A101 /* WhisperTranscribeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhisperTranscribeApp.swift; sourceTree = "<group>"; };
+		A102 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A103 /* TranscriptionQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptionQueue.swift; sourceTree = "<group>"; };
+		A104 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A106 /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
+		A108 /* AdvancedSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedSettingsView.swift; sourceTree = "<group>"; };
+		A111 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		A110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A150 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+
+		A160 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {LastSwiftUpdateCheck = 1500; LastUpgradeCheck = 1500; };
+			buildConfigurationList = A161;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = it;
+			hasScannedForEncodings = 0;
+			knownRegions = (en, Base, it);
+			mainGroup = A162;
+			productRefGroup = A163;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (A090);
+		};
+		A161 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (A164, A165);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A162 /* = */ = {
+			isa = PBXGroup;
+			children = (A100, A163);
+			sourceTree = "<group>";
+		};
+		A163 /* Products */ = {
+			isa = PBXGroup;
+			children = (A095);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A164 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; MACOSX_DEPLOYMENT_TARGET = 14.0; SDKROOT = macosx; SWIFT_TREAT_WARNINGS_AS_ERRORS = NO;};
+			name = Debug;
+		};
+		A165 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; MACOSX_DEPLOYMENT_TARGET = 14.0; SDKROOT = macosx; SWIFT_TREAT_WARNINGS_AS_ERRORS = NO;};
+			name = Release;
+		};
+	};
+	rootObject = A160;
+}
