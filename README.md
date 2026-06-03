@@ -1,5 +1,12 @@
 # WhisperTranscribe
 
+![Version](https://img.shields.io/badge/Version-3.0-3b82f6?style=flat-square&labelColor=4a4a4a)
+![License](https://img.shields.io/badge/License-MIT-22c55e?style=flat-square&labelColor=4a4a4a)
+![Platform](https://img.shields.io/badge/Platform-macOS%2014%2B-2563eb?style=flat-square&labelColor=4a4a4a)
+![Chip](https://img.shields.io/badge/Chip-Apple%20Silicon-ea580c?style=flat-square&labelColor=4a4a4a)
+![Language](https://img.shields.io/badge/Language-Swift%206-f05138?style=flat-square&labelColor=4a4a4a)
+![Engine](https://img.shields.io/badge/Engine-Whisper%20%7C%20MLX-7c3aed?style=flat-square&labelColor=4a4a4a)
+
 A native macOS app for **local, offline audio & video transcription**, powered by [OpenAI Whisper](https://github.com/openai/whisper) running on Apple Silicon via [MLX](https://github.com/ml-explore/mlx).
 
 Drop in any audio or video file and get clean subtitles — entirely on your Mac, with nothing uploaded to the cloud.
