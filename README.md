@@ -28,6 +28,33 @@ Drop in any audio or video file and get clean subtitles — entirely on your Mac
 - **8 GB RAM** minimum (16 GB recommended for the `large-v3` model)
 - [Homebrew](https://brew.sh) and **Python 3** (the app installs the rest for you)
 
+### Tested environment
+
+These are the exact versions the app was built and verified with. Newer versions
+generally work too, but if you hit an issue, match these for a known-good setup.
+
+| Component | Version |
+|---|---|
+| macOS | 26.5.1 (Apple M4 Pro) |
+| Xcode | 26.5 |
+| Swift | 6.3.2 |
+| Homebrew | 5.1.14 |
+| ffmpeg | 8.1 |
+| Python | 3.14.4 |
+| mlx-whisper | 0.4.3 |
+| mlx / mlx-metal | 0.31.1 |
+| huggingface_hub | 1.7.1 |
+| numpy | 2.4.3 |
+
+To pin the exact Python packages, after the app's Setup has run you can install
+matching versions into its virtual environment:
+
+```bash
+~/whisper-env-mlx/bin/pip install \
+  "mlx-whisper==0.4.3" "mlx==0.31.1" "mlx-metal==0.31.1" \
+  "huggingface_hub==1.7.1" "numpy==2.4.3"
+```
+
 ---
 
 ## Installation
