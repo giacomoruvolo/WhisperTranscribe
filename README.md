@@ -1,6 +1,6 @@
 # WhisperTranscribe
 
-![Version](https://img.shields.io/badge/Version-3.0-3b82f6?style=flat-square&labelColor=4a4a4a)
+![Version](https://img.shields.io/badge/Version-3.0.1-3b82f6?style=flat-square&labelColor=4a4a4a)
 ![License](https://img.shields.io/badge/License-MIT-22c55e?style=flat-square&labelColor=4a4a4a)
 ![Platform](https://img.shields.io/badge/Platform-macOS%2014%2B-2563eb?style=flat-square&labelColor=4a4a4a)
 ![Chip](https://img.shields.io/badge/Chip-Apple%20Silicon-ea580c?style=flat-square&labelColor=4a4a4a)

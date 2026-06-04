@@ -294,7 +294,18 @@ class TranscriptionQueue: ObservableObject, @unchecked Sendable {
     }
 
     func removeJob(_ job: TranscriptionJob) {
-        guard job.status == .waiting else { return }
+        // If the job is currently transcribing, kill its process before removing it.
+        if job.status == .running {
+            currentProcess?.terminate()
+            let killer = Process()
+            killer.executableURL = URL(fileURLWithPath: "/usr/bin/pkill")
+            killer.arguments     = ["-9", "-f", "mlx_whisper"]
+            try? killer.run(); killer.waitUntilExit()
+            currentProcess = nil
+            job.markDone(success: false)
+        } else if job.status != .waiting {
+            return  // done/failed jobs are cleared via clearCompleted()
+        }
         jobs.removeAll { $0.id == job.id }
         recalcProgress()
     }
@@ -348,6 +359,9 @@ class TranscriptionQueue: ObservableObject, @unchecked Sendable {
         let total = pending.count
         for (i, job) in pending.enumerated() {
             if userStopped { break }
+            // Skip jobs that were removed from the queue after Start was pressed.
+            let stillQueued = await MainActor.run { self.jobs.contains { $0.id == job.id } }
+            if !stillQueued { continue }
             await MainActor.run { statusMessage = tr("Trascrizione \(i+1)/\(total): \(job.fileName)", "Transcribing \(i+1)/\(total): \(job.fileName)") }
             await transcribeLocal(job: job)
             await MainActor.run { recalcProgress() }
@@ -356,9 +370,10 @@ class TranscriptionQueue: ObservableObject, @unchecked Sendable {
         let ok  = jobs.filter { $0.status == .done  }.count
         let err = jobs.filter { $0.status == .failed }.count
         await MainActor.run {
-            isRunning     = false
-            statusMessage = tr("✓ \(ok) completati\(err > 0 ? "  ·  ✕ \(err) errori" : "")",
-                               "✓ \(ok) done\(err > 0 ? "  ·  ✕ \(err) errors" : "")")
+            currentProcess = nil
+            isRunning      = false
+            statusMessage  = tr("✓ \(ok) completati\(err > 0 ? "  ·  ✕ \(err) errori" : "")",
+                                "✓ \(ok) done\(err > 0 ? "  ·  ✕ \(err) errors" : "")")
         }
         notify(ok: ok, err: err)
     }
